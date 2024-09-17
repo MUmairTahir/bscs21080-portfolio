@@ -1,0 +1,301 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #1b264d, #0a143c);
+    color: aqua;
+}
+.wlcm_msg{
+    color: white;
+}
+
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #1b264d;
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: top 0.3s; /* Smooth transition for hiding/showing */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul li button:hover {
+    color: rgb(237, 182, 16);
+}
+
+nav ul li.portfolio-item button {
+    font-size: 24px;
+}
+
+.hidden {
+    top: -80px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        margin: 10px;
+        flex: 1 1 30%;
+        text-align: center;
+    }
+
+    nav ul li button {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .hidden {
+        top: -230px;
+    }
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    padding: 50px 20px 20px;
+    background: none;
+    margin: 10px;
+}
+/* Define the animation keyframes */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the welcomeMessage */
+  #welcomeMessage {
+    animation: fadeInUp 2s ease-out forwards;
+    opacity: 0; /* Start with the element hidden */
+  }
+  
+
+.section h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 28px;
+    /* color: crimson; */
+    color: white;
+    text-align: center;
+}
+
+.section p {
+    margin: 5px 0;
+}
+#aboutMe{
+    margin: 0 6%;
+    text-align: justify;
+}
+.skills, #awardsList, #educationList {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between items */
+}
+
+/* Card Styles */
+.project-card, .award-card, .edu-card {
+    min-width: 300px;
+    background: #1b264d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.skills h3, .project-card h3, .award-card h3, .edu-card h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: yellowgreen;
+}
+
+.project-card p, .award-card p, .edu-card p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: aqua;
+}
+
+/* Social Media */
+#socialMediaHome a, #socialMediaFeed a {
+    margin-right: 15px;
+    color: white;
+    background: none;
+    text-decoration: none;
+}
+
+#socialMediaHome i, #socialMediaFeed i {
+    font-size: 24px;
+}
+
+#socialMediaHome a:hover i, #socialMediaFeed a:hover i {
+    color: rgb(237, 182, 16); /* Change to your preferred hover color */
+}
+
+/* Specific colors for social media icons */
+#socialMediaFeed .fa-facebook {
+    color: #4267B2; /* Facebook color */
+}
+
+#socialMediaFeed .fa-instagram {
+    color: #E1306C; /* Instagram color */
+}
+
+#socialMediaFeed .fa-github {
+    color: #585555; /* GitHub color */
+}
+
+
+/* Video Container */
+.video-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Slider Container */
+.slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.slide-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Slider Navigation Buttons */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(237, 182, 16);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 20px;
+}
+
+button.next {
+    right: 20px;
+}
+
+/* Home Section */
+#home {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    background: linear-gradient(to bottom right, #0a143c, #1b264d); /* Background gradient */
+    position: relative; /* For positioning the language selectors */
+}
+
+#welcomeMessage {
+    font-size: 36px; /* Larger font size */
+    font-weight: bold; /* Bold text */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect for readability */
+    margin: 20px 0; /* Space around the message */
+    line-height: 1.4; /* Adjust line height */
+}
+
+#profileSection {
+    margin: 20px 0; /* Space around the profile picture */
+}
+
+#profilePic {
+    border-radius: 50%; /* Circular image */
+    width: 150px; /* Adjust the size */
+    height: 150px; /* Maintain aspect ratio */
+    display: flex;
+    margin: 0 auto; /* Center the image */
+    border: 5px solid white; /* White border */
+    padding: 5px; /* Space between border and image */
+}
+
+/* Language Selectors */
+#languageButtons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#languageButtons button {
+    background-color: #1b264d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#languageButtons button:hover {
+    color: rgb(237, 182, 16);
+}

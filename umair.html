@@ -9,17 +9,27 @@
     <script src="umair.js" defer></script>
 </head>
 <body>
+
+
     <nav>
         <ul id="navLinks">
             <li><strong>Portfolio</strong></li>
         </ul>
     </nav>
 
-    <div id="home" class="section">
-        <h1 id="welcomeMessage"></h1>
-        <div id="socialMediaFeed"></div>
+    <div id="home">
+      <div id="languageButtons">
+        <button id="lang-en">English</button>
+        <button id="lang-ar">عربي</button>
+        <button id="lang-fr">Français</button>
+     </div>
+      <p id="welcomeMessage" class="wlcm_msg"></p>
+      <div id="profileSection">
+          <img id="profilePic" src="" alt="Profile Picture" />
+      </div>
+      <div id="socialMediaFeed"></div>
     </div>
-
+  
     <div id="about" class="section">
         <h2>About</h2>
         <p id="aboutMe"></p>
@@ -50,7 +60,7 @@
           </div>
           <button class="next">›</button>
       </div>
-  </section>
+    </section>
 
     <div id="contact" class="section">
         <h2>Contact</h2>
@@ -61,7 +71,7 @@
         <h2>Video</h2>
         <div class="video-container">
             <video id="myVideo" controls muted>
-                <source src="D:/Web Development/Teamwork and Leadership __ Motivational short Animation Video....mp4" type="video/mp4">
+                <source src="Teamwork and Leadership __ Motivational short Animation Video....mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
