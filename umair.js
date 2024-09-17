@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const nav = document.querySelector("nav");
     const scrollThreshold = 100;
 
-    // Function to update navigation visibility
     function updateNavVisibility() {
         const scrollTop = window.scrollY;
         if (nav) {
@@ -81,7 +80,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Function to create and populate elements
     function populateElement(containerId, dataArray, createElementFn) {
         const container = document.getElementById(containerId);
         if (container && Array.isArray(dataArray)) {
@@ -89,11 +87,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Initialize last scroll position
     let lastScrollTop = 0;
     window.addEventListener("scroll", updateNavVisibility);
 
-    // Populate navigation links
     populateElement("navLinks", portfolioData.navLinks, link => {
         const listItem = document.createElement("li");
         const button = document.createElement("button");
@@ -103,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("navLinks").appendChild(listItem);
     });
 
-    // Populate Home section
     const welcomeMessageElement = document.getElementById("welcomeMessage");
     if (welcomeMessageElement) {
         welcomeMessageElement.innerText = portfolioData.home.welcomeMessage.en;
@@ -127,11 +122,9 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Populate About section
     const aboutMeElement = document.getElementById("aboutMe");
     if (aboutMeElement) aboutMeElement.innerText = portfolioData.about.aboutMe;
 
-    // Populate Skills sections
     const hardSkillsContainer = document.getElementById("hardSkills");
     const softSkillsContainer = document.getElementById("softSkills");
 
@@ -153,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Populate Projects and initialize slider
     const projectsListContainer = document.getElementById("projectsList");
     if (projectsListContainer) {
         portfolioData.projects.forEach(project => {
@@ -163,7 +155,6 @@ document.addEventListener("DOMContentLoaded", function() {
             projectsListContainer.appendChild(projectCard);
         });
 
-        // Initialize slider
         const prevBtn = document.querySelector(".prev");
         const nextBtn = document.querySelector(".next");
         const slideContainer = document.querySelector(".slide-container");
@@ -194,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Populate Awards and Certifications
     populateElement("awardsList", portfolioData.awardsCertifications, item => {
         const itemCard = document.createElement("div");
         itemCard.classList.add("award-card");
@@ -202,7 +192,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("awardsList").appendChild(itemCard);
     });
 
-    // Populate Education
     populateElement("educationList", portfolioData.education, edu => {
         const eduCard = document.createElement("div");
         eduCard.classList.add("edu-card");
@@ -210,11 +199,9 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("educationList").appendChild(eduCard);
     });
 
-    // Populate Contact Information
     const contactInfoElement = document.getElementById("contactInfo");
     if (contactInfoElement) contactInfoElement.innerText = portfolioData.contact.contactInfo;
 
-        // Update welcome message based on language selection
     function updateWelcomeMessage(language) {
         const welcomeMessageElement = document.getElementById("welcomeMessage");
         if (welcomeMessageElement && portfolioData.home.welcomeMessage[language]) {

@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,7 +9,6 @@ body {
     color: white;
 }
 
-/* Navigation Bar */
 nav {
     position: sticky;
     top: 0;
@@ -19,7 +18,7 @@ nav {
     padding: 10px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: top 0.3s; /* Smooth transition for hiding/showing */
+    transition: top 0.3s; 
 }
 
 nav ul {
@@ -27,9 +26,9 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
 nav ul li {
@@ -58,7 +57,7 @@ nav ul li.portfolio-item button {
     top: -80px;
 }
 
-/* Responsive Styles */
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: row;
@@ -81,16 +80,16 @@ nav ul li.portfolio-item button {
     }
 }
 
-/* Sections */
+
 .section {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
     padding: 50px 20px 20px;
     background: none;
     margin: 10px;
 }
-/* Define the animation keyframes */
+
 @keyframes fadeInUp {
     0% {
       opacity: 0;
@@ -102,10 +101,10 @@ nav ul li.portfolio-item button {
     }
   }
   
-  /* Apply the animation to the welcomeMessage */
+
   #welcomeMessage {
     animation: fadeInUp 2s ease-out forwards;
-    opacity: 0; /* Start with the element hidden */
+    opacity: 0; 
   }
   
 
@@ -113,7 +112,6 @@ nav ul li.portfolio-item button {
     margin: 0;
     padding: 0;
     font-size: 28px;
-    /* color: crimson; */
     color: white;
     text-align: center;
 }
@@ -127,12 +125,11 @@ nav ul li.portfolio-item button {
 }
 .skills, #awardsList, #educationList {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    justify-content: center; /* Center items horizontally */
-    gap: 20px; /* Space between items */
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
 }
 
-/* Card Styles */
 .project-card, .award-card, .edu-card {
     min-width: 300px;
     background: #1b264d;
@@ -153,7 +150,6 @@ nav ul li.portfolio-item button {
     color: aqua;
 }
 
-/* Social Media */
 #socialMediaHome a, #socialMediaFeed a {
     margin-right: 15px;
     color: white;
@@ -166,24 +162,22 @@ nav ul li.portfolio-item button {
 }
 
 #socialMediaHome a:hover i, #socialMediaFeed a:hover i {
-    color: rgb(237, 182, 16); /* Change to your preferred hover color */
+    color: rgb(237, 182, 16); 
 }
 
-/* Specific colors for social media icons */
 #socialMediaFeed .fa-facebook {
-    color: #4267B2; /* Facebook color */
+    color: #4267B2; 
 }
 
 #socialMediaFeed .fa-instagram {
-    color: #E1306C; /* Instagram color */
+    color: #E1306C; 
 }
 
 #socialMediaFeed .fa-github {
-    color: #585555; /* GitHub color */
+    color: #585555; 
 }
 
 
-/* Video Container */
 .video-container {
     position: relative;
     max-width: 100%;
@@ -196,7 +190,6 @@ nav ul li.portfolio-item button {
     display: block;
 }
 
-/* Slider Container */
 .slider {
     position: relative;
     overflow: hidden;
@@ -219,7 +212,6 @@ nav ul li.portfolio-item button {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Slider Navigation Buttons */
 button.prev, button.next {
     position: absolute;
     top: 50%;
@@ -242,41 +234,39 @@ button.next {
     right: 20px;
 }
 
-/* Home Section */
 #home {
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text */
-    background: linear-gradient(to bottom right, #0a143c, #1b264d); /* Background gradient */
-    position: relative; /* For positioning the language selectors */
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    background: linear-gradient(to bottom right, #0a143c, #1b264d); 
+    position: relative; 
 }
 
 #welcomeMessage {
-    font-size: 36px; /* Larger font size */
-    font-weight: bold; /* Bold text */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Shadow effect for readability */
-    margin: 20px 0; /* Space around the message */
-    line-height: 1.4; /* Adjust line height */
+    font-size: 36px; 
+    font-weight: bold; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    margin: 20px 0; 
+    line-height: 1.4; 
 }
 
 #profileSection {
-    margin: 20px 0; /* Space around the profile picture */
+    margin: 20px 0; 
 }
 
 #profilePic {
-    border-radius: 50%; /* Circular image */
-    width: 150px; /* Adjust the size */
-    height: 150px; /* Maintain aspect ratio */
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
     display: flex;
-    margin: 0 auto; /* Center the image */
-    border: 5px solid white; /* White border */
-    padding: 5px; /* Space between border and image */
+    margin: 0 auto; 
+    border: 5px solid white; 
+    padding: 5px; 
 }
 
-/* Language Selectors */
 #languageButtons {
     position: absolute;
     top: 10px;
